@@ -27,7 +27,7 @@ services:
     container_name: dev.pgadmin4
     restart: always
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@dev
+      PGADMIN_DEFAULT_EMAIL: admin@dev.local
       PGADMIN_DEFAULT_PASSWORD: postgres
     networks:
       - dev-postgres
