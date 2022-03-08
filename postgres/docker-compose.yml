@@ -14,11 +14,11 @@ services:
     container_name: dev.postgres
     restart: always
     environment:
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: password
     networks:
       - dev-postgres
     ports:
-      - 54320:5432
+      - 5432:5432
     volumes:
       - postgres:/var/lib/postgresql/data
 
@@ -28,10 +28,10 @@ services:
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@dev.local
-      PGADMIN_DEFAULT_PASSWORD: postgres
+      PGADMIN_DEFAULT_PASSWORD: password
     networks:
       - dev-postgres
     ports:
-      - 54321:80
+      - 8889:80
     volumes:
       - pgadmin4:/var/lib/pgadmin
